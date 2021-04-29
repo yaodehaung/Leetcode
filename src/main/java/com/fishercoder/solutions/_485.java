@@ -15,4 +15,31 @@ public class _485 {
             return maxLen;
         }
     }
+
+    // time space O(n)
+    public static class Solution2 {
+
+        public int findMaxConsecutiveOnes(int[] nums){
+            int maxLen = 0;
+            int currentLen = 0;
+
+            for(int i = 0 ; i < nums.length; i++){
+                if(nums[i] == 1){
+                    currentLen++;
+                    if(maxLen < currentLen ){
+                        maxLen = currentLen;
+                    }
+                }else{
+                    currentLen = 0;
+                }
+            }
+
+            return maxLen;
+        }
+    }
+
+    // Sliding Window Solution
+    public static class Solution3{
+
+    }
 }
