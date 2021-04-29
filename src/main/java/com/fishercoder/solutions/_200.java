@@ -123,4 +123,43 @@ public class _200 {
             return uf.count;
         }
     }
+
+    public static class Solution3 {
+        public int numIslands(char[][] grid) {
+
+//            validation grid status
+            if(grid == null || grid[0].length == 0){
+                return 0;
+            }
+
+            int nr = grid.length;
+            int nc = grid[0].length;
+
+            boolean[][] marked = new boolean[m][n]; // or visit by setting value as '0'
+
+            int islandCount = 0;
+
+            for(int r = 0 ; r < nr ; r++){
+
+                for(int c = 0; c < nc; c++){
+
+                    if(grid[r][c] == '1'){
+
+                        if (!marked[i][j] && grid[i][j] == '1') {
+                            bfs(i, j, grid, marked, direction);
+                            islandCount++;
+                        }
+
+                    }
+                }
+
+            }
+            return islandCount;
+        }
+
+        private void bfs(int i, int j, char[][] grid, boolean[][] marked, int[][] direction){
+
+
+        }
+    }
 }

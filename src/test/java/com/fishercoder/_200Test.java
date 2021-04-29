@@ -9,12 +9,16 @@ import static org.junit.Assert.assertEquals;
 public class _200Test {
     private static _200.Solution1 solution1;
     private static _200.Solution2 solution2;
+    private static _200.Solution3 solution3;
+
     private static char[][] grid;
 
     @Before
     public void setup() {
         solution1 = new _200.Solution1();
         solution2 = new _200.Solution2();
+        solution3 = new _200.Solution3();
+
     }
 
     @Test
@@ -32,6 +36,14 @@ public class _200Test {
                 {'1', '1', '1'},
         };
         assertEquals(1, solution2.numIslands(grid));
+
+
+        grid = new char[][]{
+                {'1', '1', '1'},
+                {'0', '1', '0'},
+                {'1', '1', '1'},
+        };
+        assertEquals(1, solution3.numIslands(grid));
     }
 
     @Test
